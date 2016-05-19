@@ -19,6 +19,12 @@ ADD my.cnf /etc/mysql/conf.d/my.cnf
 ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 ADD supervisord-mysqld.conf /etc/supervisor/conf.d/supervisord-mysqld.conf
 
+# Add scripts to initializate Database and grant permissions to Prestashop special folders
+ADD scriptBDCreate.sh /scriptBDCreate.sh
+ADD scriptBDRestore.sh /scriptBDRestore.sh
+ADD permissions.sh /permissions.sh
+
+
 # Remove pre-installed database
 RUN rm -rf /var/lib/mysql/*
 
