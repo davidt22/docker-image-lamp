@@ -1,15 +1,17 @@
 davidt22-docker-lamp
 =================
 
-Out-of-the-box LAMP image (PHP+MySQL)
+Out-of-the-box LAMP image (PHP+MySQL) for Docker
 
 
 Usage
 -----
 
+First of all, you have to clone this repository in your local machine and go into the created folder.
+
 To create the image `davidt22/lamp`, execute the following command on the davidt22-docker-lamp folder:
 
-	docker build -t davidt22/lamp .
+	docker build -t davidt22/lamp . 
 
 You can now push your new image to the registry:
 
@@ -124,8 +126,8 @@ Disabling .htaccess
 
 **by http://www.davidteruel.es**
 
-First steps
--------------
+First steps for a local project
+-------------------------------
 1- Clone this repository into your local machine
 2- Run in console in same directory of Dockerfile:
     2.1- >> sudo docker build -t davidt22/lamp .   #This compiles the Dockerfile into a image with all instructions
