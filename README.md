@@ -129,14 +129,26 @@ Disabling .htaccess
 First steps for a local project
 -------------------------------
 1- Clone this repository into your local machine
+
 2- Run in console in same directory of Dockerfile:
+
     2.1- >> sudo docker build -t davidt22/lamp .   #This compiles the Dockerfile into a image with all instructions
+    
     2.2- >> sudo docker run -tid -v /YOUR/LOCAL/ROUTE/PROJECT:/var/www --name davidt22_lamp davidt22/lamp #This executes a new instance(container) of your image
+    
     2.3- >> sudo docker exec -ti davidt22_lamp bash #This access into the container via bash
+    
     2.4- Modify the virtualhost by the name you choose using this
+    
         2.4.1- >> nano /etc/apache2/sites-avaliable/000-default.conf
+        
         2.4.2- Change the ServerName by yours 
+        
         2.4.3- >>sudo apache2 restart/reload # restart apache
+        
         2.4.4- Obtain the IP of the container with >> ifconfig
-        2.4.4- In your local /etc/hosts file add map the IP with a name like: 172.17.0.9    www.myproject.local
+        
+        2.4.5- In your local /etc/hosts file add map the IP with a name like: 172.17.0.9    www.myproject.local
+        
+   REMEMBER TO STOP YOUR APACHE2 AND MYSQL LOCAL IF YOU HAVE INSTALLED IT PREVIOUSLY ¡¡
         
